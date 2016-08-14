@@ -1,0 +1,43 @@
+extends layout
+block content
+	h2.page-header NODEJS全栈博客系统
+	each post in posts
+		div.post
+			h3.post-title
+				a(href="/posts/view/"+post.slug,target="_blank")
+					=post.title 
+			div.post-abstract
+				=truncate(post.content,160)
+			div.post-meta
+				span.post-created
+					发布时间 :
+					=moment(post.created).format("YYYY-MM-DD")
+				span.post-author
+					作者 :
+					=post.author.name
+				span.post-category
+					分类 :
+					a(href="/posts/category/"+post.category.title,target="_blank")
+						=post.category.title
+				span.post-comment
+					评论 :
+					=post.comments.length
+				span.post-favorite
+					被赞 :
+					=post.meta.favorites
+				span.post-link
+					a(href="/posts/view/"+post._id,target="_blank") 查看全文
+	if pageCount>1
+		nav
+			ul.pagination
+				-var currentPage=1
+				while currentPage<=pageCount
+					if (currentPage===pageNum)
+						li.active
+							a(href="/posts?page="+currentPage)=currentPage++
+					else
+						li
+							a(href="/posts?page="+currentPage)=currentPage++
+					
+		
+			

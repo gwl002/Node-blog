@@ -1,0 +1,18 @@
+extend ../layout_user
+
+block content
+	form.form-signin(method="post",action="/admin/users/changePass")
+		h2.form-signin-heading 管理员密码修改
+			small.pull-right
+				a(href="/admin/posts") 取消修改
+		!= messages()	
+		label.sr-only(for="email")	邮箱
+		input.email.form-control(name="email",type="email",placeholder="Email address",value=user.email,readonly,required="true")
+
+		label.sr-only(for="originalpass") 原密码
+		input.password.form-control(name="originalpass",type="password",placeholder="Original Password",required="true")
+
+		label.sr-only(for="newpass") 新密码
+		input.password.form-control(name="newpass",type="password",placeholder="New Password",required="true")
+
+		button.btn.btn-lg.btn-primary.btn-block(type="submit") 确认修改

@@ -1,0 +1,65 @@
+body {
+       padding-top: 40px;
+       padding-bottom: 40px;
+       background-color: #f5f5f5;
+     }
+
+.form-signin {
+ max-width: 300px;
+ padding: 19px 29px 29px;
+ margin: 0 auto 20px;
+ background-color: #fff;
+ border: 1px solid #e5e5e5;
+ -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+         border-radius: 5px;
+ -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+         box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+ margin-bottom: 10px;
+}
+.form-signin-heading small{
+	display:inline-block;
+	margin-top:20px;
+	font-size:50%;
+}
+
+.form-signin input.email,
+.form-signin input.password,
+.form-register input.confirm-password{
+ font-size: 16px;
+ height: auto;
+ margin-bottom: 15px;
+ padding: 7px 9px;
+}
+
+#messages .error,#messages .info {
+    margin: 0;
+    padding: 0;
+}
+
+#messages .error li {
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+
+#messages .info li{
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #13E9E7;
+    border-color: #EBCCD1;
+}
